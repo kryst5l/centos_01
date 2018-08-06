@@ -1,0 +1,22 @@
+clone or download (里面选择clone with ssh)
+    克隆项目：给到一个项目地址后，自己克隆到本地进行代码运行。
+    执行命令：git clone git@github.com:XXXXX
+    （注意路径，克隆到自己想要放置的位置）
+    可以把readme给带上 然后忽略掉*.pyc
+
+    本地推送：首先创建创建一个分支  git branch  (在自己本地写代码，提交代码,会新增一个smart的分支 git checkout -b smart)
+
+    1：然后比如添加要增加的代码：vi views.py(写完之后，可以git status查看一下状态-------此时 提交为空，但是存在尚未跟踪的文件（使用“git add”建立跟踪）)
+
+    2：git add views.py   完成后再 git commit -m "创建index视图"
+    （后面备注信息要写的有意义一点 的内容）
+
+    推送到 远程github仓库 ：git push origin smart(单词一定不要写错了)
+    (此时会会提示已经完成)
+
+    将本地的分支跟踪服务器分支：
+    git branch --set-upstream-to=origin/smart smart
+
+    然后如果本地修改了增加了代码之后，git status之后会显示---你的分支领先   orgin/smart 共一个提交
+
+    然后再直接去git push 就可以了
